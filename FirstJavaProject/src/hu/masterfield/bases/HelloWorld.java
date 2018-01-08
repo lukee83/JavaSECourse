@@ -1,3 +1,4 @@
+package hu.masterfield.bases;
 
 public class HelloWorld {
 
