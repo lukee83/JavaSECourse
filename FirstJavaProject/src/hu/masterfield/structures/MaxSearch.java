@@ -4,7 +4,7 @@ import java.util.Random;
 
 public class MaxSearch 
 {
-	private static int[] arrayGenerator(final int size)
+	public static int[] arrayGenerator(final int size)
 	{
 		if(size < 1) return null;
 		
@@ -14,19 +14,19 @@ public class MaxSearch
 
 		for(int i = 0; i < arr.length; ++i)
 		{
-			arr[i] = r.nextInt(100);
+			arr[i] = r.nextInt(366);
 		}
 		
 		return arr;
 	}
 	
-	private static void printArray(int[] arr) 
+	public static void printArray(int[] arr) 
 	{
 		for(int item : arr) { System.out.print(item + ", ");}
 		System.out.println();
 	}
 	
-	private static int getMaxElement(int[] arr) 
+	public static int getMaxElement(int[] arr) 
 	{
 		int max = arr[0];
 		
@@ -38,14 +38,27 @@ public class MaxSearch
 		return max;
 	}
 	
-	public static void main(String[] args) 
+	public static boolean hasElementMod17(int[] arr) 
 	{
-		final int MERET = 10;
-		int[] arr = arrayGenerator(MERET);
-		printArray(arr);
-		System.out.println("A tomb maximuma: " + getMaxElement(arr));
-		
+		for(int item : arr) { if(item%17 == 0) return true; }
+		return false;
 	}
+	
+//	public static void main(String[] args) 
+//	{
+//		final int MERET = 10;
+//		int[] arr = arrayGenerator(MERET);
+//		printArray(arr);
+//		System.out.println("A tomb maximuma: " + getMaxElement(arr));
+//	
+//		int[] arr2 = arrayGenerator(15);
+//		printArray(arr2);
+//		System.out.println("Does it have mod17 element? Answer: " + hasElementMod17(arr2));
+//		
+//		
+//	}
+
+	
 
 	
 
