@@ -11,7 +11,8 @@ public class BronzePackage
 	}
 	
 	@Override
-	public String toString() {
+	public String toString()
+	{
 		return this.getClass().getSimpleName();
 	}
 

@@ -30,14 +30,16 @@ public class RunTask {
 		
 		Account Kriszta = new Account("Kriszta", 200, 200);
 		System.out.println(Kriszta);
+		
+		System.out.println("300 perccel Kriszta ennyit fizet: " + Kriszta.getPkg().getInvoice(300, 300));
+		
 	}
 	
 	public static void main(String[] args) 
 	{
-		// TODO Auto-generated method stub
-		testBronze();
-		testSilver();
-		testGold();
+		// testBronze();
+		// testSilver();
+		// testGold();
 		testAccount();
 	}
 

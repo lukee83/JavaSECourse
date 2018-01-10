@@ -11,6 +11,11 @@ public class Account
 		chooseSubsciption();
 	}
 	
+	protected BronzePackage getPkg()
+	{
+		return pkg;
+	}
+
 	public void chooseSubsciption() 
 	{
 		BronzePackage bp = new BronzePackage();
@@ -26,7 +31,6 @@ public class Account
 		else this.pkg = gp;
 		
 	}
-	
 	
 	@Override
 	public String toString() {
